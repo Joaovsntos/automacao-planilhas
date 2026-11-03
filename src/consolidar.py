@@ -57,12 +57,22 @@ def setup_logging() -> logging.Logger:
 
 
 def parse_br_number(val) -> float | None:
+    """Aceita 1.234.567,89 (BR), 1234567.89 (US) ou 1234567,89."""
     if val is None or (isinstance(val, float) and pd.isna(val)):
         return None
     s = str(val).strip().strip('"')
-    if s == "" or s.upper() in {"N/A", "NA", "NULL", "-", "#N/A"}:
+    if s == "" or s.upper() in {"N/A", "NA", "NULL", "-", "#N/A", "NAN"}:
         return None
-    s = s.replace(".", "").replace(",", ".")
+    # remove currency symbols / spaces
+    for ch in ("R$", " "):
+        s = s.replace(ch, "")
+    if "," in s and "." in s:
+        # BR: milhar com ponto, decimal com vírgula
+        s = s.replace(".", "").replace(",", ".")
+    elif "," in s:
+        # só vírgula → decimal BR
+        s = s.replace(",", ".")
+    # só ponto → já está em formato decimal US
     try:
         return float(s)
     except ValueError:
