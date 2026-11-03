@@ -1,0 +1,8 @@
+Fonte: Portal de Dados Abertos da Prefeitura do Recife
+Conjunto: Despesas Orçamentárias — Despesas Órgão 2024 e 2025
+URLs:
+- https://dados.recife.pe.gov.br/dataset/63f7941b-9a1e-4a49-893b-d5f16e2134d8/resource/32880df9-87da-46fa-b77b-7fbfbf75aeaf/download/despesas-orgao-2024.csv
+- https://dados.recife.pe.gov.br/dataset/63f7941b-9a1e-4a49-893b-d5f16e2134d8/resource/349f8b0a-8d51-4905-b3b3-eca817911b3e/download/despesas-orgao-2025.csv
+Licença: Open Data Commons ODbL
+Os arquivos .xlsx desta pasta são recortes mensais do CSV oficial,
+simulando exportações operacionais a consolidar.

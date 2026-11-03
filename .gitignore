@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+logs/*.log
+output/*
+!output/.gitkeep
+!output/resumo_por_mes.csv
+!output/rejeitados.csv
+!output/relatorio_despesas_consolidado.xlsx
+dados_entrada/*.xlsx
+.DS_Store

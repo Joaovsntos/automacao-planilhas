@@ -1,0 +1,5 @@
+TÍTULO (≤50):
+Automação Excel — consolidação de despesas
+
+DESCRIÇÃO (≤400):
+Script que une dezenas de planilhas mensais de despesas públicas, valida valores no padrão brasileiro, registra linhas rejeitadas e gera um relatório Excel formatado com KPIs, totais por mês, órgão e grupo. Usa dados abertos reais da Prefeitura do Recife. Pronto para adaptar a exportações do seu ERP/financeiro.
